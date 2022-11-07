@@ -10,19 +10,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./Assets/index.css">
 </head>
-<div class="jumbotron">
+<div class="jumbotron" id="jumbotron">
     <h1 class="display-4">Get your weather updates around the world</h1>
     <p class="lead">Please choose a city you would like your weather updates from <i class='fas fa-cloud-sun' style='font-size:36px'></i></p>
     <p id="currentDay" class = "lead"></p>
     </div>
-<body>
+    <body class="">
 
     <div class="container">
        
         <div class="row">
             <div class="col-md-4 text-dark bg-light">
                 
-                <h4 class="pt-1">Search for a City:</h4>
+                <h2 class="pt-1">Search for a City:</h2>
                
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" id="search-city">
@@ -37,9 +37,13 @@
                 </ul>
             </div>   
             <div class="col-md-8">
+                <div class="row bg-light currentday"></div>
                 <div class="row border bg-light currentday border-dark rounded">
                     <div class="col-md-8" id="current-weather">
                         <h3 class="city-name" id="current-city"></h3>
+                        <p>Temperature: <span class="current" id="temperature"></span></p>
+                        <p>Humidity: <span class="current" id="humidity"></span></p> 
+                        <p>Wind Speed: <span class="current" id="wind-speed"></span></p>
                         <p>Temperature:<span class="current" id="temperature"></span></p>
                         <p>Humidity:<span class="current" id="humidity"></span></p> 
                         <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
@@ -49,40 +53,42 @@
                 <div class="col-md-12" id ="future-weather">
                     <h3 class="bg-light">5-Day Forecast:</h3>
                     <div class="row text-dark">
+                        <div class="col-md-3 forecast " >
                         <div class="col-md-2 forecast text-dark" >
                             <p id="fDate0"></p>
                             <p id="fImg0"></p>
-                            <p>Temp:<span id="fTemp0"></span></p>
-                            <p>Humidity:<span id="fHumidity0"></span></p>
-                            <p>Wind Speed:<span id="fWind0"></span></p>
+                            <p>Temp: <span id="fTemp0"></span></p>
+                            <p>Humidity: <span id="fHumidity0"></span></p>
+                            <p>Wind Speed: <span id="fWind0"></span></p>
                         </div>
-                        <div class="col-md-2 forecast text-dark" >
+                        <div class="col-md-3 forecast" >
                             <p id="fDate1"></p>
                             <p id="fImg1"></p>
-                            <p>Temp:<span id="fTemp1"></span></p>
-                            <p>Humidity:<span id="fHumidity1"></span></p>
-                            <p>Wind Speed:<span id="fWind1"></span></p>
+                            <p>Temp: <span id="fTemp1"></span></p>
+                            <p>Humidity: <span id="fHumidity1"></span></p>
+                            <p>Wind Speed: <span id="fWind1"></span></p>
                         </div>
+                        <div class="col-md-3 forecast">
                         <div class="col-md-2 forecast text-dark">
                             <p id="fDate2"></p>
                             <p id="fImg2"></p>
-                            <p>Temp:<span id="fTemp2"></span></p>
-                            <p>Humidity:<span id="fHumidity2"></span></p>
-                            <p>Wind Speed:<span id="fWind2"></span></p>
+                            <p>Temp: <span id="fTemp2"></span></p>
+                            <p>Humidity: <span id="fHumidity2"></span></p>
+                            <p>Wind Speed: <span id="fWind2"></span></p>
                         </div>
-                        <div class="col-md-2 forecast text-dark">
+                        <div class="col-md-3 forecast">
                             <p id="fDate3"></p>
                             <p id="fImg3"></p>
-                            <p>Temp:<span id="fTemp3"></span></p>
-                            <p>Humidity:<span id="fHumidity3"></span></p>
-                            <p>Wind Speed:<span id="fHumidity3"></span></p>
+                            <p>Temp: <span id="fTemp3"></span></p>
+                            <p>Humidity: <span id="fHumidity3"></span></p>
+                            <p>Wind Speed: <span id="fWind3"></span></p>
                         </div>
-                        <div class="col-md-2 forecast text-dark" >
+                        <div class="col-md-3 forecast" >
                             <p id="fDate4"></p>
                             <p id="fImg4"></p>
-                            <p>Temp:<span id="fTemp4"></span></p>
-                            <p>Humidity:<span id="fHumidity4"></span></p>
-                            <p>Wind Speed:<span id="fWind4"></span></p>
+                            <p>Temp: <span id="fTemp4"></span></p>
+                            <p>Humidity: <span id="fHumidity4"></span></p>
+                            <p>Wind Speed: <span id="fWind4"></span></p>
                         </div>
                     </div>
                 </div>

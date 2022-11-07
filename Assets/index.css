@@ -12,9 +12,13 @@
   }
 
 
-  .pt-1{
+  h2{
     font-weight: bolder;
 }
+
+span {
+    font-size: 1em;
+    }
 
 .city-name {
 margin-bottom: 4px;
@@ -23,6 +27,9 @@ font-weight: bolder;
 }
 .currentday  {
     margin-left: 8px;
+    border: 5px solid;
+    border-radius: 15px;
+    color: black;
 }
 .btn {
     background-color: lightblue;
@@ -34,10 +41,19 @@ font-weight: bolder;
     padding: 6px;
     margin-top: 8px;
     border-radius: 15px;
+    color: black;
+    border: 5px;
+    border-style: solid;
+    border-color: black;
 }
 div {
     opacity: .9;
 }
+
+#jumbotron{
+    padding-bottom: 4px;
+    padding-top: 4px;
+    }
 
 
 .snow{
