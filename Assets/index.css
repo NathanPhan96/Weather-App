@@ -1,0 +1,7 @@
+.jumbotron {
+    text-align: center;
+    background: linear-gradient(to top right, lightgrey, lightblue);
+    color: black;
+    border-radius: 0;
+    border-bottom: 5px solid black;
+  }
