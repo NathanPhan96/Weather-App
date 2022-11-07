@@ -6,7 +6,6 @@ $(document).ready(function() {
 
 
 var city="";
-
 var currentCity = $("#current-city"); 
 var searchCity = $("#search-city");
 var searchButton = $('#search-button');
