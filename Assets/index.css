@@ -4,7 +4,7 @@
 
 .jumbotron {
     text-align: center;
-    background: linear-gradient(to top right, lightgrey, lightblue);
+    background: linear-gradient(to top right, lightgrey, lightslategray);
     color: black;
     border-radius: 0;
     border-bottom: 5px solid black;
@@ -20,7 +20,7 @@ span {
     font-size: 1em;
     }
 
-    
+
 .city-name {
 margin-bottom: 4px;
 margin-top: 8px;
@@ -33,10 +33,10 @@ font-weight: bolder;
     color: black;
 }
 .btn {
-    background-color: lightblue;
+    background-color: lightslategray;
 }
 .forecast {
-    background-color: lightblue;
+    background-color: lightslategrey;
     margin-left: 8px;
     margin-bottom: 9px; 
     padding: 6px;
