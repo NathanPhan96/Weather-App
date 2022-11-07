@@ -11,11 +11,11 @@ var currentCity = $("#current-city");
 var searchCity = $("#search-city");
 var searchButton = $('#search-button');
 var clearButton = $("#clear-history");
-let currentHumidity= $("#humidity");
+var currentHumidity= $("#humidity");
 var currentTemperature = $("#temperature");
-let currentWSpeed= $("#wind-speed");
+var currentWSpeed= $("#wind-speed");
 var sCity =[];
-
+var currentDescription = $('#description');
 
 function find(c){
     for (var i=0; i<sCity.length; i++){
@@ -41,6 +41,10 @@ function currentWeather(city){
     .then(function(response){
       console.log(response)
 
+      const description = response.weather[0].description;
+      $(currentDescription).html(description);
+
+
         const weathericon= response.weather[0].icon;
         const iconurl="https://openweathermap.org/img/wn/"+weathericon +"@2x.png";
 
@@ -50,12 +54,12 @@ function currentWeather(city){
 
 
         const tempF = response.main.temp;
-        $(currentTemperature).html((tempF).toFixed(2)+"&#8457");
+        currentTemperature.html((tempF).toFixed(2)+"&#8457");
 
-        $(currentHumidity).html(response.main.humidity+"%");
+        currentHumidity.html(response.main.humidity+"%");
 
         const ws=response.wind.speed;
-        $(currentWSpeed).html(ws+"MPH");
+        currentWSpeed.html(ws+"MPH");
 
 
         if(response.weather[0].main === "Clouds") {
@@ -63,22 +67,33 @@ function currentWeather(city){
             $("body").removeClass("rain");
             $("body").removeClass("sunny");
             $("body").removeClass("snow");
+            $("body").removeClass("thunder");
         }else if(response.weather[0].main === "Rain") {
             $("body").addClass("rain");
             $("body").removeClass("cloudy");
             $("body").removeClass("sunny");
             $("body").removeClass("snow");
+            $("body").removeClass("thunder");
         }else if(response.weather[0].main === "Snow") {
             $("body").addClass("snow");
             $("body").removeClass("cloudy");
             $("body").removeClass("sunny");
             $("body").removeClass("rain");  
+            $("body").removeClass("thunder");
         }else if(response.weather[0].main === "Clear") {
             $("body").addClass("sunny");
             $("body").removeClass("cloudy");
             $("body").removeClass("snow");
             $("body").removeClass("rain");  
-        }
+            $("body").removeClass("thunder");
+        }else if(response.weather[0].main === "Thunder") {
+            $("body").addClass("thunder");
+            $("body").removeClass("sunny");
+            $("body").removeClass("cloudy");
+            $("body").removeClass("snow");
+            $("body").removeClass("rain"); 
+        };
+        
         forecast(response.id);
         if(response.cod==200){
             sCity=JSON.parse(localStorage.getItem("cityname"));
