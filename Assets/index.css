@@ -1,7 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+
 .jumbotron {
     text-align: center;
     background: linear-gradient(to top right, lightgrey, lightblue);
     color: black;
     border-radius: 0;
     border-bottom: 5px solid black;
+    opacity: .9;
   }
+
+
+  .pt-1{
+    font-weight: bolder;
+}
+
+.city-name {
+margin-bottom: 4px;
+margin-top: 8px;
+font-weight: bolder;
+}
+.currentday  {
+    margin-left: 8px;
+}
+.btn {
+    background-color: lightblue;
+}
+.forecast {
+    background-color: lightblue;
+    margin-left: 8px;
+    margin-bottom: 9px; 
+    padding: 6px;
+    margin-top: 8px;
+    border-radius: 15px;
+}
+div {
+    opacity: .9;
+}
+
+
+.snow{
+background-image: url("https://thumbs.gfycat.com/CircularUnripeCutworm-size_restricted.gif");
+background-size: cover;
+}
+.sunny{
+background-image: url("https://media.giphy.com/media/l0Iy2x1FicLn45JGE/giphy.gif");
+background-size: cover;
+}
+.rain{
+background-image: url("https://bestanimations.com/media/rain/1674097529rain-nature-animated-gif-4.gif");
+background-size: cover;
+}
+.cloudy{
+background-image: url("https://media.tenor.com/X00POlaPOsIAAAAd/moving-clouds-world-meteorological-day.gif");
+background-size: cover;
+}

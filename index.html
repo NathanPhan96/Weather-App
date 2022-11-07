@@ -17,6 +17,84 @@
     </div>
 <body>
 
+    <div class="container">
+       
+        <div class="row">
+            <div class="col-md-4 text-dark bg-light">
+                
+                <h4 class="pt-1">Search for a City:</h4>
+               
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search-city">
+                    <div class="input-group-append">
+                        <button class=" btn" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+               
+                <button class=" btn" type="button" id="clear-history">Clear History</button>
+                <ul class="list-group">
+
+                </ul>
+            </div>   
+            <div class="col-md-8">
+                <div class="row border bg-light currentday border-dark rounded">
+                    <div class="col-md-8" id="current-weather">
+                        <h3 class="city-name" id="current-city"></h3>
+                        <p>Temperature:<span class="current" id="temperature"></span></p>
+                        <p>Humidity:<span class="current" id="humidity"></span></p> 
+                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                    </div>
+                </div>
+               
+                <div class="col-md-12" id ="future-weather">
+                    <h3 class="bg-light">5-Day Forecast:</h3>
+                    <div class="row text-dark">
+                        <div class="col-md-2 forecast text-dark" >
+                            <p id="fDate0"></p>
+                            <p id="fImg0"></p>
+                            <p>Temp:<span id="fTemp0"></span></p>
+                            <p>Humidity:<span id="fHumidity0"></span></p>
+                            <p>Wind Speed:<span id="fWind0"></span></p>
+                        </div>
+                        <div class="col-md-2 forecast text-dark" >
+                            <p id="fDate1"></p>
+                            <p id="fImg1"></p>
+                            <p>Temp:<span id="fTemp1"></span></p>
+                            <p>Humidity:<span id="fHumidity1"></span></p>
+                            <p>Wind Speed:<span id="fWind1"></span></p>
+                        </div>
+                        <div class="col-md-2 forecast text-dark">
+                            <p id="fDate2"></p>
+                            <p id="fImg2"></p>
+                            <p>Temp:<span id="fTemp2"></span></p>
+                            <p>Humidity:<span id="fHumidity2"></span></p>
+                            <p>Wind Speed:<span id="fWind2"></span></p>
+                        </div>
+                        <div class="col-md-2 forecast text-dark">
+                            <p id="fDate3"></p>
+                            <p id="fImg3"></p>
+                            <p>Temp:<span id="fTemp3"></span></p>
+                            <p>Humidity:<span id="fHumidity3"></span></p>
+                            <p>Wind Speed:<span id="fHumidity3"></span></p>
+                        </div>
+                        <div class="col-md-2 forecast text-dark" >
+                            <p id="fDate4"></p>
+                            <p id="fImg4"></p>
+                            <p>Temp:<span id="fTemp4"></span></p>
+                            <p>Humidity:<span id="fHumidity4"></span></p>
+                            <p>Wind Speed:<span id="fWind4"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
